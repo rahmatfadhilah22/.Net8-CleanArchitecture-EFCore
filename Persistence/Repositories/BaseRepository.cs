@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Appliaction
+namespace Persistence.Repository
 {
-    public class BaseService
+    public class BaseRepository
     {
 
     }

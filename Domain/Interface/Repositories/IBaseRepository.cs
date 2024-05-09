@@ -9,6 +9,8 @@ namespace Domain.Interface.Repositories
 {
     public interface IBaseRepository<T> where T : BaseEntities
     {
+        Task<int?> Insert(T entity);
+        Task<int> Update(int? id);
 
     }
 }
