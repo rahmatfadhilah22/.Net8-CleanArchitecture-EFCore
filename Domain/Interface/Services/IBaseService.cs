@@ -9,6 +9,7 @@ namespace Domain.Interface.Services
 {
     public interface IBaseService<T> where T : BaseEntities
     {
-
+        Task<int?> Insert(T entity);
+        Task<int> Update(int? id);
     }
 }

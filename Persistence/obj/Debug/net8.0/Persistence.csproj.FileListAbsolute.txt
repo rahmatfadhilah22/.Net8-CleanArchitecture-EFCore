@@ -14,3 +14,5 @@ D:\Project_Bootcamp_Backend\PROJECT_PRIBADI\.Net8-CleanArchitecture-EFCore\Persi
 D:\Project_Bootcamp_Backend\PROJECT_PRIBADI\.Net8-CleanArchitecture-EFCore\Persistence\obj\Debug\net8.0\refint\Persistence.dll
 D:\Project_Bootcamp_Backend\PROJECT_PRIBADI\.Net8-CleanArchitecture-EFCore\Persistence\obj\Debug\net8.0\Persistence.pdb
 D:\Project_Bootcamp_Backend\PROJECT_PRIBADI\.Net8-CleanArchitecture-EFCore\Persistence\obj\Debug\net8.0\ref\Persistence.dll
+D:\Project_Bootcamp_Backend\PROJECT_PRIBADI\.Net8-CleanArchitecture-EFCore\Persistence\bin\Debug\net8.0\Persistence.runtimeconfig.json
+D:\Project_Bootcamp_Backend\PROJECT_PRIBADI\.Net8-CleanArchitecture-EFCore\Persistence\obj\Debug\net8.0\Persistence.genruntimeconfig.cache

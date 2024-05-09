@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 namespace Domain.Interface.Repositories
 {
     public interface IEmployeeRepository : IBaseRepository<Employee>
+                                         , IGetDataRepository<Employee>
     {
 
     }
