@@ -1,6 +1,8 @@
-﻿namespace Infrastructure
+﻿using Microsoft.AspNetCore.Mvc;
+
+namespace Infrastructure.Controllers
 {
-    public class BaseController
+    public class BaseController : Controller
     {
     }
 }
