@@ -1,0 +1,16 @@
+D:\Project_Bootcamp_Backend\PROJECT_PRIBADI\.Net8-CleanArchitecture-EFCore\Appliaction\bin\Debug\net8.0\Appliaction.deps.json
+D:\Project_Bootcamp_Backend\PROJECT_PRIBADI\.Net8-CleanArchitecture-EFCore\Appliaction\bin\Debug\net8.0\Appliaction.dll
+D:\Project_Bootcamp_Backend\PROJECT_PRIBADI\.Net8-CleanArchitecture-EFCore\Appliaction\bin\Debug\net8.0\Appliaction.pdb
+D:\Project_Bootcamp_Backend\PROJECT_PRIBADI\.Net8-CleanArchitecture-EFCore\Appliaction\bin\Debug\net8.0\Domain.dll
+D:\Project_Bootcamp_Backend\PROJECT_PRIBADI\.Net8-CleanArchitecture-EFCore\Appliaction\bin\Debug\net8.0\Domain.pdb
+D:\Project_Bootcamp_Backend\PROJECT_PRIBADI\.Net8-CleanArchitecture-EFCore\Appliaction\obj\Debug\net8.0\Appliaction.csproj.AssemblyReference.cache
+D:\Project_Bootcamp_Backend\PROJECT_PRIBADI\.Net8-CleanArchitecture-EFCore\Appliaction\obj\Debug\net8.0\Appliaction.GeneratedMSBuildEditorConfig.editorconfig
+D:\Project_Bootcamp_Backend\PROJECT_PRIBADI\.Net8-CleanArchitecture-EFCore\Appliaction\obj\Debug\net8.0\Appliaction.AssemblyInfoInputs.cache
+D:\Project_Bootcamp_Backend\PROJECT_PRIBADI\.Net8-CleanArchitecture-EFCore\Appliaction\obj\Debug\net8.0\Appliaction.AssemblyInfo.cs
+D:\Project_Bootcamp_Backend\PROJECT_PRIBADI\.Net8-CleanArchitecture-EFCore\Appliaction\obj\Debug\net8.0\Appliaction.csproj.CoreCompileInputs.cache
+D:\Project_Bootcamp_Backend\PROJECT_PRIBADI\.Net8-CleanArchitecture-EFCore\Appliaction\obj\Debug\net8.0\Appliaction.sourcelink.json
+D:\Project_Bootcamp_Backend\PROJECT_PRIBADI\.Net8-CleanArchitecture-EFCore\Appliaction\obj\Debug\net8.0\Appliact.56AB6DF5.Up2Date
+D:\Project_Bootcamp_Backend\PROJECT_PRIBADI\.Net8-CleanArchitecture-EFCore\Appliaction\obj\Debug\net8.0\Appliaction.dll
+D:\Project_Bootcamp_Backend\PROJECT_PRIBADI\.Net8-CleanArchitecture-EFCore\Appliaction\obj\Debug\net8.0\refint\Appliaction.dll
+D:\Project_Bootcamp_Backend\PROJECT_PRIBADI\.Net8-CleanArchitecture-EFCore\Appliaction\obj\Debug\net8.0\Appliaction.pdb
+D:\Project_Bootcamp_Backend\PROJECT_PRIBADI\.Net8-CleanArchitecture-EFCore\Appliaction\obj\Debug\net8.0\ref\Appliaction.dll
