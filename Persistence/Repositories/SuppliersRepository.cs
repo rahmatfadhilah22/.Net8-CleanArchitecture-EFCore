@@ -10,32 +10,32 @@ using System.Threading.Tasks;
 
 namespace Persistence.Repositories
 {
-    public class EmployeeRepository : IEmployeeRepository
+    public class SuppliersRepository : ISuppliersRepository
     {
         private readonly DatabaseContext _context;
-        public EmployeeRepository(DatabaseContext context)
+        public SuppliersRepository(DatabaseContext context)
         {
             _context = context;
         }
-        public async Task<IEnumerable<Employee>> GetRecords(string? keyword, int? page, int? pageSize)
+        public async Task<IEnumerable<Suppliers>> GetRecords(string? keyword, int? page, int? pageSize)
         {
             try
             {
-                if (_context.Employees == null)
-                    return Enumerable.Empty<Employee>();
+                if (_context.Suppliers == null)
+                    return Enumerable.Empty<Suppliers>();
 
                 int pageResult = pageSize ?? 10; 
                 int pageNumber = page ?? 1;
 
-                var result = _context.Employees.AsQueryable();
+                var result = _context.Suppliers.AsQueryable();
 
                 if (keyword != null)
                 {
                     result = result.Where(x =>
-                                    x.FirstName.Contains(keyword)
-                                    || x.LastName.Contains(keyword)
-                                    || x.Country.Contains(keyword)
-                                    || x.City.Contains(keyword));
+                                    x.CompanyName.Contains(keyword)
+                                    || x.ContactName.Contains(keyword)
+                                    || x.City.Contains(keyword)
+                                    || x.Phone.Contains(keyword));
                 }
 
                 int pageCount = (int)Math.Ceiling(await result.CountAsync() / (double)pageResult);
@@ -52,13 +52,13 @@ namespace Persistence.Repositories
             }
         }
 
-        public async Task<Employee> GetRecord(int? id)
+        public async Task<Suppliers> GetRecord(int? id)
         {
             try
             {
-                var result = await _context.Employees.Where(e => e.EmployeeID == id).FirstOrDefaultAsync();
+                var result = await _context.Suppliers.Where(e => e.SupplierID == id).FirstOrDefaultAsync();
                 if (result == null)
-                    return new Employee();
+                    return new Suppliers();
                 
                 return result;
 
@@ -68,13 +68,13 @@ namespace Persistence.Repositories
                 throw;
             }
         }
-        public async Task<int?> Insert(Employee entity)
+        public async Task<int?> Insert(Suppliers entity)
         {
             try
             {
-                var newEntity = await _context.Employees.AddAsync(entity);
+                var newEntity = await _context.Suppliers.AddAsync(entity);
                 int result = await _context.SaveChangesAsync();
-                return newEntity.Entity.EmployeeID;
+                return newEntity.Entity.SupplierID;
             }
             catch (Exception)
             {
@@ -83,17 +83,16 @@ namespace Persistence.Repositories
             
         }
 
-        public async Task<int> Update(Employee entity)
+        public async Task<int> Update(Suppliers entity)
         {
             try
             {
-                var employee = await _context.Employees.FindAsync(entity.EmployeeID);
+                var Suppliers = await _context.Suppliers.FindAsync(entity.SupplierID);
 
-                if (employee == null)
+                if (Suppliers == null)
                     throw new Exception("No data can Update");
 
-                employee.FirstName = entity.FirstName;
-                employee.LastName = entity.LastName;
+                Suppliers.CompanyName = entity.CompanyName;
 
                 int result = await _context.SaveChangesAsync();
                 return result;
@@ -107,12 +106,12 @@ namespace Persistence.Repositories
         {
             try
             {
-                var employee = await _context.Employees.FindAsync(id);
+                var Suppliers = await _context.Suppliers.FindAsync(id);
 
-                if (employee == null)
+                if (Suppliers == null)
                     throw new Exception("No data can delete");
 
-                _context.Employees.Remove(employee);
+                _context.Suppliers.Remove(Suppliers);
                 int result = await _context.SaveChangesAsync();
                 return result;
             }

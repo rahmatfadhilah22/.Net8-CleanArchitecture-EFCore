@@ -11,6 +11,8 @@ namespace Infrastructure.ScopeRegister
         {
             services.AddScoped<IEmployeeService, EmployeeService>();
             services.AddScoped<IEmployeeRepository, EmployeeRepository>();
+            services.AddScoped<ISuppliersService, SuppliersService>();
+            services.AddScoped<ISuppliersRepository, SuppliersRepository>();
         }
     }
 

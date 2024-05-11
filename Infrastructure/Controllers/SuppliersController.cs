@@ -5,10 +5,10 @@ using Microsoft.AspNetCore.Mvc;
 namespace Infrastructure.Controllers
 {
     [Route("api/[controller]")]
-    public class EmployeeController : BaseController
+    public class SuppliersController : BaseController
     {
-        private readonly IEmployeeService _service;
-        public EmployeeController(IEmployeeService service)
+        private readonly ISuppliersService _service;
+        public SuppliersController(ISuppliersService service)
         {
             _service = service;
         }
@@ -41,7 +41,7 @@ namespace Infrastructure.Controllers
             }
         }
         [HttpPost("Insert")]
-        public async Task<IActionResult> Insert([FromBody]Employee entity)
+        public async Task<IActionResult> Insert([FromBody]Suppliers entity)
         {
             try
             {
@@ -55,7 +55,7 @@ namespace Infrastructure.Controllers
         }
 
         [HttpPut("Update")]
-        public async Task<IActionResult> Update([FromBody]Employee entity)
+        public async Task<IActionResult> Update([FromBody]Suppliers entity)
         {
             try
             {
