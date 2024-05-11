@@ -5,32 +5,29 @@ using Persistence.Database;
 
 namespace Persistence.Repositories
 {
-    public class EmployeeRepository : IEmployeeRepository
+    public class ProductsRepository : IProductsRepository
     {
         private readonly DatabaseContext _context;
-        public EmployeeRepository(DatabaseContext context)
+        public ProductsRepository(DatabaseContext context)
         {
             _context = context;
         }
-        public async Task<IEnumerable<Employee>> GetRecords(string? keyword, int? page, int? pageSize)
+        public async Task<IEnumerable<Products>> GetRecords(string? keyword, int? page, int? pageSize)
         {
             try
             {
-                if (_context.Employees == null)
-                    return Enumerable.Empty<Employee>();
+                if (_context.Products == null)
+                    return Enumerable.Empty<Products>();
 
                 int pageResult = pageSize ?? 10; 
                 int pageNumber = page ?? 1;
 
-                var result = _context.Employees.AsQueryable();
+                var result = _context.Products.AsQueryable();
 
                 if (keyword != null)
                 {
                     result = result.Where(x =>
-                                    x.FirstName.Contains(keyword)
-                                    || x.LastName.Contains(keyword)
-                                    || x.Country.Contains(keyword)
-                                    || x.City.Contains(keyword));
+                                    x.ProductName.Contains(keyword));
                 }
 
                 int pageCount = (int)Math.Ceiling(await result.CountAsync() / (double)pageResult);
@@ -47,13 +44,13 @@ namespace Persistence.Repositories
             }
         }
 
-        public async Task<Employee> GetRecord(int? id)
+        public async Task<Products> GetRecord(int? id)
         {
             try
             {
-                var result = await _context.Employees.Where(e => e.EmployeeID == id).FirstOrDefaultAsync();
+                var result = await _context.Products.Where(e => e.CategoryID == id).FirstOrDefaultAsync();
                 if (result == null)
-                    return new Employee();
+                    return new Products();
                 
                 return result;
 
@@ -63,13 +60,13 @@ namespace Persistence.Repositories
                 throw;
             }
         }
-        public async Task<int?> Insert(Employee entity)
+        public async Task<int?> Insert(Products entity)
         {
             try
             {
-                var newEntity = await _context.Employees.AddAsync(entity);
+                var newEntity = await _context.Products.AddAsync(entity);
                 int result = await _context.SaveChangesAsync();
-                return newEntity.Entity.EmployeeID;
+                return newEntity.Entity.CategoryID;
             }
             catch (Exception)
             {
@@ -78,17 +75,16 @@ namespace Persistence.Repositories
             
         }
 
-        public async Task<int> Update(Employee entity)
+        public async Task<int> Update(Products entity)
         {
             try
             {
-                var employee = await _context.Employees.FindAsync(entity.EmployeeID);
+                var Products = await _context.Products.FindAsync(entity.CategoryID);
 
-                if (employee == null)
+                if (Products == null)
                     throw new Exception("No data can Update");
 
-                employee.FirstName = entity.FirstName;
-                employee.LastName = entity.LastName;
+                Products.ProductName = entity.ProductName;
 
                 int result = await _context.SaveChangesAsync();
                 return result;
@@ -102,12 +98,12 @@ namespace Persistence.Repositories
         {
             try
             {
-                var employee = await _context.Employees.FindAsync(id);
+                var Products = await _context.Products.FindAsync(id);
 
-                if (employee == null)
+                if (Products == null)
                     throw new Exception("No data can delete");
 
-                _context.Employees.Remove(employee);
+                _context.Products.Remove(Products);
                 int result = await _context.SaveChangesAsync();
                 return result;
             }

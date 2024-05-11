@@ -2,7 +2,7 @@
 
 namespace Domain.Interface.Services
 {
-    public interface IEmployeeService : IBaseService<Employee>
+    public interface ICategoriesService : IBaseService<Categories>
     {
 
     }
