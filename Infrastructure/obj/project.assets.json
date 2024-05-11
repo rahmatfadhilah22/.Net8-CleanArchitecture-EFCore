@@ -3225,11 +3225,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Project_Bootcamp_Backend\\PROJECT_PRIBADI\\.Net8-CleanArchitecture-EFCore\\Infrastructure\\Infrastructure.csproj",
+      "projectUniqueName": "D:\\PROJECT_PRIBADI\\.Net8-CleanArchitecture-EFCore\\Infrastructure\\Infrastructure.csproj",
       "projectName": "Infrastructure",
-      "projectPath": "D:\\Project_Bootcamp_Backend\\PROJECT_PRIBADI\\.Net8-CleanArchitecture-EFCore\\Infrastructure\\Infrastructure.csproj",
+      "projectPath": "D:\\PROJECT_PRIBADI\\.Net8-CleanArchitecture-EFCore\\Infrastructure\\Infrastructure.csproj",
       "packagesPath": "C:\\Users\\lenovo\\.nuget\\packages\\",
-      "outputPath": "D:\\Project_Bootcamp_Backend\\PROJECT_PRIBADI\\.Net8-CleanArchitecture-EFCore\\Infrastructure\\obj\\",
+      "outputPath": "D:\\PROJECT_PRIBADI\\.Net8-CleanArchitecture-EFCore\\Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -3246,14 +3246,14 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\Project_Bootcamp_Backend\\PROJECT_PRIBADI\\.Net8-CleanArchitecture-EFCore\\Appliaction\\Application.csproj": {
-              "projectPath": "D:\\Project_Bootcamp_Backend\\PROJECT_PRIBADI\\.Net8-CleanArchitecture-EFCore\\Appliaction\\Application.csproj"
+            "D:\\PROJECT_PRIBADI\\.Net8-CleanArchitecture-EFCore\\Appliaction\\Application.csproj": {
+              "projectPath": "D:\\PROJECT_PRIBADI\\.Net8-CleanArchitecture-EFCore\\Appliaction\\Application.csproj"
             },
-            "D:\\Project_Bootcamp_Backend\\PROJECT_PRIBADI\\.Net8-CleanArchitecture-EFCore\\Domain\\Domain.csproj": {
-              "projectPath": "D:\\Project_Bootcamp_Backend\\PROJECT_PRIBADI\\.Net8-CleanArchitecture-EFCore\\Domain\\Domain.csproj"
+            "D:\\PROJECT_PRIBADI\\.Net8-CleanArchitecture-EFCore\\Domain\\Domain.csproj": {
+              "projectPath": "D:\\PROJECT_PRIBADI\\.Net8-CleanArchitecture-EFCore\\Domain\\Domain.csproj"
             },
-            "D:\\Project_Bootcamp_Backend\\PROJECT_PRIBADI\\.Net8-CleanArchitecture-EFCore\\Persistence\\Persistence.csproj": {
-              "projectPath": "D:\\Project_Bootcamp_Backend\\PROJECT_PRIBADI\\.Net8-CleanArchitecture-EFCore\\Persistence\\Persistence.csproj"
+            "D:\\PROJECT_PRIBADI\\.Net8-CleanArchitecture-EFCore\\Persistence\\Persistence.csproj": {
+              "projectPath": "D:\\PROJECT_PRIBADI\\.Net8-CleanArchitecture-EFCore\\Persistence\\Persistence.csproj"
             }
           }
         }

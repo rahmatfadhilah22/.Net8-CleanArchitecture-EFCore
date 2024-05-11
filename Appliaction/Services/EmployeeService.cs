@@ -2,7 +2,6 @@
 using Domain.Interface.Services;
 using Domain.Models;
 
-
 namespace Application.Services
 {
     public class EmployeeService : IEmployeeService
@@ -12,24 +11,73 @@ namespace Application.Services
         {
             _repository = repository;
         }
-        public async Task<IEnumerable<Employee>> GetData()
+        public async Task<IEnumerable<Employee>> GetRecords(string? keyword, int? page, int? pageSize)
         {
-            return await _repository.GetData();
+            try
+            {
+                var result = await _repository.GetRecords(keyword, page, pageSize);
+                return result;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
 
-        public Task<Employee> GetData(int id)
+        public async Task<Employee> GetRecord(int? id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var result = await _repository.GetRecord(id);
+                return result;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
 
-        public Task<int?> Insert(Employee entity)
+        public async Task<int?> Insert(Employee entity)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var result = await _repository.Insert(entity);
+                return result;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
 
-        public Task<int> Update(int? id)
+        public async Task<int> Update(Employee id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var result = await _repository.Update(id);
+                return result;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
+        public async Task<int> Delete(List<int> entities)
+        {
+            try
+            {
+                int results = 0;
+                foreach (var entity in entities)
+                {
+                    results += await _repository.Delete(entity);
+                }
+                return results;
+            }
+            catch(Exception) 
+            {
+                throw;
+            }
+        }
+
     }
 }

@@ -32,11 +32,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Project_Bootcamp_Backend\\PROJECT_PRIBADI\\.Net8-CleanArchitecture-EFCore\\Appliaction\\Application.csproj",
+      "projectUniqueName": "D:\\PROJECT_PRIBADI\\.Net8-CleanArchitecture-EFCore\\Appliaction\\Application.csproj",
       "projectName": "Application",
-      "projectPath": "D:\\Project_Bootcamp_Backend\\PROJECT_PRIBADI\\.Net8-CleanArchitecture-EFCore\\Appliaction\\Application.csproj",
+      "projectPath": "D:\\PROJECT_PRIBADI\\.Net8-CleanArchitecture-EFCore\\Appliaction\\Application.csproj",
       "packagesPath": "C:\\Users\\lenovo\\.nuget\\packages\\",
-      "outputPath": "D:\\Project_Bootcamp_Backend\\PROJECT_PRIBADI\\.Net8-CleanArchitecture-EFCore\\Appliaction\\obj\\",
+      "outputPath": "D:\\PROJECT_PRIBADI\\.Net8-CleanArchitecture-EFCore\\Appliaction\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -53,8 +53,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\Project_Bootcamp_Backend\\PROJECT_PRIBADI\\.Net8-CleanArchitecture-EFCore\\Domain\\Domain.csproj": {
-              "projectPath": "D:\\Project_Bootcamp_Backend\\PROJECT_PRIBADI\\.Net8-CleanArchitecture-EFCore\\Domain\\Domain.csproj"
+            "D:\\PROJECT_PRIBADI\\.Net8-CleanArchitecture-EFCore\\Domain\\Domain.csproj": {
+              "projectPath": "D:\\PROJECT_PRIBADI\\.Net8-CleanArchitecture-EFCore\\Domain\\Domain.csproj"
             }
           }
         }
