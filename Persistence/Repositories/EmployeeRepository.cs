@@ -2,11 +2,6 @@
 using Domain.Models;
 using Microsoft.EntityFrameworkCore;
 using Persistence.Database;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Persistence.Repositories
 {
@@ -29,9 +24,13 @@ namespace Persistence.Repositories
 
                 var result = _context.Employees.AsQueryable();
 
-                if (!string.IsNullOrEmpty(keyword))
+                if (keyword != null)
                 {
-                    result = result.Where(e => e.FirstName.Contains(keyword));
+                    result = result.Where(x =>
+                                    x.FirstName.Contains(keyword)
+                                    || x.LastName.Contains(keyword)
+                                    || x.Country.Contains(keyword)
+                                    || x.City.Contains(keyword));
                 }
 
                 int pageCount = (int)Math.Ceiling(await result.CountAsync() / (double)pageResult);

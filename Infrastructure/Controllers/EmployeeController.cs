@@ -41,7 +41,7 @@ namespace Infrastructure.Controllers
             }
         }
         [HttpPost("Insert")]
-        public async Task<IActionResult> Insert(Employee entity)
+        public async Task<IActionResult> Insert([FromBody]Employee entity)
         {
             try
             {
@@ -55,7 +55,7 @@ namespace Infrastructure.Controllers
         }
 
         [HttpPut("Update")]
-        public async Task<IActionResult> Update(Employee entity)
+        public async Task<IActionResult> Update([FromBody]Employee entity)
         {
             try
             {

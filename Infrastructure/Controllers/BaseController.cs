@@ -13,6 +13,8 @@ namespace Infrastructure.Controllers
                 Message = "",
                 Data = data
             };
+            await Task.CompletedTask;
+
             return Ok(bodyResponse);
         }
 
@@ -24,6 +26,8 @@ namespace Infrastructure.Controllers
                 Message = "",
                 Data = data
             };
+            await Task.CompletedTask;
+
             return Ok(bodyResponse);
         }
 
@@ -35,6 +39,8 @@ namespace Infrastructure.Controllers
                 Message = "",
                 Data = data
             };
+            await Task.CompletedTask;
+
             return Ok(bodyResponse);
         }
         protected async Task<ActionResult> Error(Exception ex)
@@ -43,8 +49,9 @@ namespace Infrastructure.Controllers
             {
                 Message = ex.Message,
                 Result = 0,
-                Data = null
+                Data = null!
             };
+            await Task.CompletedTask;
 
             return BadRequest(bodyResponse);
         }
