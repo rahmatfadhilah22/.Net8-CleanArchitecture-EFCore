@@ -10,10 +10,7 @@ namespace Persistence.Database
 {
     public class DatabaseContext : DbContext
     {
-        public DatabaseContext(DbContextOptions<DatabaseContext> options) : base(options)
-        {
-            
-        }
+        public DatabaseContext(DbContextOptions<DatabaseContext> options) : base(options) { }
         public DbSet<Employee> Employees { get; set; }
     }
 }

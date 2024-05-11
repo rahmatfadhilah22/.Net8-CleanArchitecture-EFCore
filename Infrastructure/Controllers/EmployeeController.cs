@@ -1,10 +1,11 @@
 ﻿using Domain.Interface.Services;
+using Domain.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Infrastructure.Controllers
 {
     [Route("api/[controller]")]
-    public class EmployeeController : Controller
+    public class EmployeeController : BaseController
     {
         private readonly IEmployeeService _service;
         public EmployeeController(IEmployeeService service)
@@ -12,11 +13,74 @@ namespace Infrastructure.Controllers
             _service = service;
         }
 
-        [HttpGet]
-        public async Task<IActionResult> GetData()
+        [HttpGet("GetRecords")]
+        public async Task<IActionResult> GetRecords(string? keyword, int page, int pageSize)
         {
-            var data = await _service.GetData();
-            return Ok(data);
+            try
+            {
+                var data = await _service.GetRecords(keyword, page, pageSize);
+                return await Success(data);
+            }
+            catch (Exception ex)
+            {
+                return await Error(ex);
+            }
         }
+
+        [HttpGet("GetRecord")]
+        public async Task<IActionResult> GetRecord(int id)
+        {
+            try
+            {
+                var data = await _service.GetRecord(id);
+                return await Success(data);
+            }
+            catch (Exception ex)
+            {
+                return await Error(ex) ;
+            }
+        }
+        [HttpPost("Insert")]
+        public async Task<IActionResult> Insert(Employee entity)
+        {
+            try
+            {
+                var data = await _service.Insert(entity);
+                return await Success(data);
+            }
+            catch (Exception ex)
+            {
+                return await Error(ex);
+            }
+        }
+
+        [HttpPut("Update")]
+        public async Task<IActionResult> Update(Employee entity)
+        {
+            try
+            {
+                var result = await _service.Update(entity);
+                return await Success(result);
+            }
+            catch (Exception ex)
+            {
+                return await Error(ex);
+            }
+        }
+
+        [HttpDelete("Delete")]
+        public async Task<IActionResult> Delete(List<int> entities)
+        {
+            try
+            {
+                var result = await _service.Delete(entities);
+                return await Success(result);
+            }
+            catch (Exception ex)
+            {
+                return await Error(ex);
+            }
+        }
+
     }
 }

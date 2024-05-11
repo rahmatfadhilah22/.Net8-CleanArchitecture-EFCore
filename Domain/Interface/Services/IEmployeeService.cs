@@ -7,8 +7,7 @@ using System.Threading.Tasks;
 
 namespace Domain.Interface.Services
 {
-    public interface IEmployeeService : IBaseService<Employee>,
-                                 IGetDataService<Employee>
+    public interface IEmployeeService : IBaseService<Employee>
     {
 
     }
