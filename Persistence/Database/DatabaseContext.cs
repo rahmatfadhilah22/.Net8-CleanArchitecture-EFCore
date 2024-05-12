@@ -16,5 +16,6 @@ namespace Persistence.Database
         public DbSet<Categories> Categories { get; set; }
         public DbSet<Products> Products { get; set; }
         public DbSet<Customers> Customers { get; set; }
+        public DbSet<Shippers> Shippers { get; set; }
     }
 }
