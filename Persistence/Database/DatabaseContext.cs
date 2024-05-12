@@ -18,5 +18,6 @@ namespace Persistence.Database
         public DbSet<Customers> Customers { get; set; }
         public DbSet<Shippers> Shippers { get; set; }
         public DbSet<Region> Region { get; set; }
+        public DbSet<Territories> Territories { get; set; }
     }
 }

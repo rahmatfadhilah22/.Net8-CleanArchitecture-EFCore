@@ -23,6 +23,8 @@ namespace Infrastructure.ScopeRegister
             services.AddScoped<IShippersRepository, ShippersRepository>();
             services.AddScoped<IRegionService, RegionService>();
             services.AddScoped<IRegionRepository, RegionRepository>();
+            services.AddScoped<ITerritoriesService, TerritoriesService>();
+            services.AddScoped<ITerritoriesRepository, TerritoriesRepository>();
         }
     }
 
