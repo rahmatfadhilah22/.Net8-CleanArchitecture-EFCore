@@ -17,6 +17,8 @@ namespace Infrastructure.ScopeRegister
             services.AddScoped<ICategoriesRepository, CategoriesRepository>();
             services.AddScoped<IProductsService, ProductsService>();
             services.AddScoped<IProductsRepository, ProductsRepository>();
+            services.AddScoped<ICustomersService, CustomersService>();
+            services.AddScoped<ICustomersRepository, CustomersRepository>();
         }
     }
 
