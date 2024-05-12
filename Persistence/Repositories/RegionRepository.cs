@@ -53,7 +53,9 @@ namespace Persistence.Repositories
         {
             try
             {
-                var result = await _context.Region.Where(e => e.RegionID == id).FirstOrDefaultAsync();
+                var result = await _context.Region
+                    .Include(r => r.Territories)
+                    .Where(e => e.RegionID == id).FirstOrDefaultAsync();
                 if (result == null)
                     return new Region();
                 
