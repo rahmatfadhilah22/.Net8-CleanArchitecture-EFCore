@@ -5,10 +5,10 @@ using Microsoft.AspNetCore.Mvc;
 namespace Infrastructure.Controllers
 {
     [Route("api/[controller]")]
-    public class CustomersController : BaseController
+    public class TerritoriesController : BaseController
     {
-        private readonly ICustomersService _service;
-        public CustomersController(ICustomersService service)
+        private readonly ITerritoriesService _service;
+        public TerritoriesController(ITerritoriesService service)
         {
             _service = service;
         }
@@ -41,12 +41,12 @@ namespace Infrastructure.Controllers
             }
         }
         [HttpPost("Insert")]
-        public async Task<IActionResult> Insert([FromBody]Customers entity)
+        public async Task<IActionResult> Insert([FromBody]Territories entity)
         {
             try
             {
                 var data = await _service.Insert(entity);
-                return await Success(data!);
+                return await Success(data);
             }
             catch (Exception ex)
             {
@@ -55,7 +55,7 @@ namespace Infrastructure.Controllers
         }
 
         [HttpPut("Update")]
-        public async Task<IActionResult> Update([FromBody]Customers entity)
+        public async Task<IActionResult> Update([FromBody]Territories entity)
         {
             try
             {
