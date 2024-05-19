@@ -25,6 +25,10 @@ namespace Infrastructure.ScopeRegister
             services.AddScoped<IRegionRepository, RegionRepository>();
             services.AddScoped<ITerritoriesService, TerritoriesService>();
             services.AddScoped<ITerritoriesRepository, TerritoriesRepository>();
+            services.AddScoped<IOrdersService, OrdersService>();
+            services.AddScoped<IOrdersRepository, OrdersRepository>();
+            services.AddScoped<IOrderDetailsService, OrderDetailsService>();
+            services.AddScoped<IOrderDetailsRepository, OrderDetailsRepository>();
         }
     }
 

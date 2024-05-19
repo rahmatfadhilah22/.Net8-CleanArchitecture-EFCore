@@ -1,10 +1,5 @@
 ﻿using Domain.Models;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Persistence.Database
 {
@@ -19,5 +14,7 @@ namespace Persistence.Database
         public DbSet<Shippers> Shippers { get; set; }
         public DbSet<Region> Region { get; set; }
         public DbSet<Territories> Territories { get; set; }
+        public DbSet<Orders> Orders { get; set; }
+        public DbSet<OrderDetails> OrderDetails { get; set; }
     }
 }
